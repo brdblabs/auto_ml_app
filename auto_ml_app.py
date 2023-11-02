@@ -31,9 +31,9 @@ if choice == "Profiling":
     profile_report = df.profile_report()
     st_profile_report(profile_report)
 
-if choice == "ML":
+if choice == "Modelling":
     st.title("Machine Learning")
-    target = st.selectbox("Select your target", df.columns)
+    target = st.selectbox("Select your target column", df.columns)
     if st.button("Train model"):
         setup(df, target=target)
         setup_df = pull()
@@ -48,4 +48,4 @@ if choice == "ML":
 
 if choice == "Download":
     with open("best_model.pkl", "rb") as f:
-        st.download_button("Download the model", f, "trained_model.pkl")
+        st.download_button("Download the model", f, file_name="trained_model.pkl")
