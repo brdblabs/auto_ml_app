@@ -12,7 +12,7 @@ from pycaret.classification import setup, compare_models, pull, save_model
 with st.sidebar:
     st.image("image.jpg")
     st.title("AutoStream ML")
-    choice = st.radio("Navigation", ["Upload", "Profiling", "ML", "Download"])
+    choice = st.radio("Navigation", ["Upload", "Profiling", "Modelling", "Download"])
     st.info("This application allows you to build an automated ML pipeline using Streamlit, Pandas Profiling and Pycaret.")
 
 if os.path.exists("sourcedata.csv"):
