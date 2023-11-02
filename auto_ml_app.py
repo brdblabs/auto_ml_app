@@ -1,3 +1,4 @@
+from operator import index
 import pandas as pd
 import streamlit as st
 import os
@@ -7,7 +8,7 @@ import ydata_profiling
 from streamlit_pandas_profiling import st_profile_report
 
 # Import ML functions
-from pycaret.classification import setup, compare_models, pull, save_model
+from pycaret.classification import setup, compare_models, pull, save_model, load_model
 
 with st.sidebar:
     st.image("image.jpg")
